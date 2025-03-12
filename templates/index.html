@@ -1,1 +1,22 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remover Amizades & Seguidores</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Login via Cookie do Roblox</h2>
+    <p><a href="https://www.roblox.com" target="_blank">Acesse o Roblox</a> e siga o <a href="https://chrome.google.com/webstore/detail/cookiemanager/..." target="_blank">tutorial</a> para pegar seu cookie.</p>
+    
+    <input type="text" id="cookie" placeholder="Cole seu cookie aqui">
+    <button onclick="iniciarRemocao()">Iniciar</button>
+    <button onclick="pararRemocao()">Parar</button>
+    <button onclick="retomarRemocao()">Retomar</button>
+    <button onclick="cancelarRemocao()">Cancelar</button>
+    
+    <div id="status"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
