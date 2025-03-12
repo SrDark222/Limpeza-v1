@@ -12,8 +12,3 @@ Este projeto permite remover amigos e parar de seguir no Roblox automaticamente.
 6. Cole esse cookie na interface da nossa ferramenta.
 
 ⚠ **Atenção**: Nunca compartilhe seu cookie com ninguém!
-
-## Como Executar
-1. Instale os requisitos:  
-   ```bash
-   pip install flask requests
