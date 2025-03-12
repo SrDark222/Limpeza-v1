@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Remover Amizades & Seguidores</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Amizades & Seguidores - Roblox</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Login via Cookie do Roblox</h2>
-    <p>⚠️ Pegue seu cookie do Roblox e cole no campo abaixo.</p>
-    
-    <input type="text" id="cookie" placeholder="Cole seu cookie aqui">
-    <button onclick="iniciarRemocao()">Iniciar</button>
-    <button onclick="pararRemocao()">Parar</button>
-    <button onclick="retomarRemocao()">Retomar</button>
-    <button onclick="cancelarRemocao()">Cancelar</button>
-    
-    <div id="status"></div>
+    <div class="container">
+        <h1>Remover Amizades & Seguidores - Roblox</h1>
+        <p>Este projeto permite remover amigos e parar de seguir no Roblox automaticamente.</p>
+        
+        <div class="cookie-input">
+            <label for="cookie">Cole o Cookie Aqui:</label>
+            <textarea id="cookie" placeholder="Cole seu cookie aqui..." rows="3"></textarea>
+            <button onclick="getAccountInfo()">Verificar Conta</button>
+        </div>
+
+        <div class="account-info">
+            <h2>Informações da Conta</h2>
+            <p><strong>Nickname:</strong> <span id="nickname">Carregando...</span></p>
+            <p><strong>Display Name:</strong> <span id="displayname">Carregando...</span></p>
+            <p><strong>Status:</strong> <span id="status">Carregando...</span></p>
+            <p><strong>Foto:</strong> <img id="profile-pic" src="" alt="Foto de Perfil" width="100" height="100"></p>
+        </div>
+
+        <div class="actions">
+            <button onclick="removeFriends()">Remover Amigos</button>
+            <button onclick="unfollow()">Parar de Seguir</button>
+            <button onclick="cancelAction()">Cancelar</button>
+        </div>
+
+        <div id="output"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
